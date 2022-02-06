@@ -44,13 +44,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.1.0.4/  | Linux            |
-|          |          | 13.66.135.75 
+| Jump Box | Gateway  | 10.1.0.4/13.66.135.75  | Linux            |
 | WEBvm-1  | WebServer| 10.1.0.8   | Linux            |
 | WEBvm-2  | WebServer| 10.1.0.9   | Linux            |
 | WEBvm-3  | WebServer| 10.1.0.10  | Linux            |
-| ELKvm    | ELK      | 10.2.0.4   | Linux            |
-|          |          | 52.159.104.201
+| ELKvm    | ELK      | 10.2.0.4/52.159.104.201   | Linux            |
 | LBalancer| PublicIP | 52.160.141 | Linux            |
 ### Access Policies
 
