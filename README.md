@@ -121,13 +121,16 @@ root@Jump-Box-Provisioner:~$ sudo docker attach festive_meitner
 (You will now be inside of your ansible container) 
 
 root@64ae06fd699d:~# nano /etc/ansible/hosts
-  (copy the above [hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file and paste it into yours or make the appropriate changes to the ip address under [elk])
+
+  -(copy the above [hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file and paste it into yours or make the appropriate changes to the ip address under [elk])
   
 root@64ae06fd699d:/etc/ansible/roles# nano elk.yml
-  (copy the ansible playbook for [elk](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) and paste into elk.yml)
+
+  -(copy the ansible playbook for [elk](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) and paste into elk.yml)
   
 root@64ae06fd699d:/etc/ansible/roles# ansible-playbook elk.yml
-runs the [elk.yml](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) playbook
+
+  -runs the [elk.yml](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) playbook
 
  you should see something similar to
   ![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/elkplaybookrun.JPG)
