@@ -100,4 +100,8 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-
+  1) SSH into your jumpbox from your workstation
+  2) Start and attach to the ansible container within
+  3) copy the [elk.yml installation Playbook](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) into /etc/ansible/playbooks
+  4) Update the [/etc/ansible/hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file to include the elk servers private ip address(10.2.0.4 in this case)
+  5) Within your jumpbox and inside the ansible container run `ansible-playbook elk.yml` and navigate to your elk stack servers public ip [elkstackpubip]:5601 to view the the Kibana interface to verify a working installation.
