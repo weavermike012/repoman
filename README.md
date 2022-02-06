@@ -105,3 +105,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
   3) copy the [elk.yml installation Playbook](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) into /etc/ansible/playbooks
   4) Update the [/etc/ansible/hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file to include the elk servers private ip address(10.2.0.4 in this case)
   5) Within your jumpbox and inside the ansible container run `ansible-playbook elk.yml` and navigate to your elk stack servers public ip [elkstackpubip]:5601 to view the the Kibana interface to verify a working installation.
+
+![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/kibana.jpg)
+  
+  
