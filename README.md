@@ -130,7 +130,7 @@ root@64ae06fd699d:/etc/ansible/roles# ansible-playbook elk.yml
 runs the [elk.yml](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) playbook
 
  you should see something similar to
-  ![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/elkplaybookrun.jpg)
+  ![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/elkplaybookrun.JPG)
  
  
 
