@@ -7,7 +7,7 @@ config files, ansible playbooks, scripts
 
 The files in this repository were used to configure the network depicted below.
 
-<img src="https://raw.githubusercontent.com/weavermike012/repoman/main/Diagrams/azurenet.jpg"
+![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Diagrams/azurenet.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible folder's files may be used to install only certain pieces of it, such as Filebeat.
 
