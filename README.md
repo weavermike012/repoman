@@ -102,10 +102,45 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
   1) SSH into your jumpbox from your workstation
   2) Start and attach to the ansible container within
-  3) copy the [elk.yml installation Playbook](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) into /etc/ansible/playbooks
+  3) copy the [elk.yml installation Playbook](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) into /etc/ansible/roles
   4) Update the [/etc/ansible/hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file to include the elk servers private ip address(10.2.0.4 in this case)
   5) Within your jumpbox and inside the ansible container run `ansible-playbook elk.yml` and navigate to your elk stack servers public ip [elkstackpubip]:5601 to view the the Kibana interface to verify a working installation.
 
+  
+ ----------------------------------------------
+ Once you have successfully ssh'd into your jumpbox from home/school run the following commands to list, start, and attach to your docker/ansible container.
+root@Jump-Box-Provisioner:~$ sudo docker container list -a
+CONTAINER ID   IMAGE                           COMMAND                  CREATED       STATUS                          PORTS     NAMES
+64ae06fd699d   cyberxsecurity/ansible:latest   "/bin/sh -c /bin/bas…"   2 weeks ago   Exited (0) About a minute ago             festive_meitner
+
+root@Jump-Box-Provisioner:~$ sudo docker start festive_meitner
+festive_meitner
+
+root@Jump-Box-Provisioner:~$ sudo docker attach festive_meitner
+
+(You will now be inside of your ansible container) 
+
+root@64ae06fd699d:~# nano /etc/ansible/hosts
+  (copy the above [hosts](https://github.com/weavermike012/repoman/blob/main/Ansible/hosts.yml) file and paste it into yours or make the appropriate changes to the ip address under [elk])
+  
+root@64ae06fd699d:/etc/ansible/roles# nano elk.yml
+  (copy the ansible playbook for [elk](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) and paste into elk.yml)
+  
+root@64ae06fd699d:/etc/ansible/roles# ansible-playbook elk.yml
+runs the [elk.yml](https://github.com/weavermike012/repoman/blob/main/Ansible/elk.yml) playbook
+
+ you should see something similar to
+  ![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/elkplaybookrun.jpg)
+ 
+ 
+
+ - Now head on over to the forward facing ip address of your elk stack server..
 ![alt text](https://raw.githubusercontent.com/weavermike012/repoman/main/Images/kibana.jpg)
+
   
   
+  
+
+
+ 
+ 
